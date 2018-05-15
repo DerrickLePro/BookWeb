@@ -9,7 +9,6 @@ import { BookListComponent } from './book-list/book-list.component';
 import { SingleBookComponent } from './book-list/single-book/single-book.component';
 import { BookFormComponent } from './book-list/book-form/book-form.component';
 import { HeaderComponent } from './header/header.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AuthService} from './services/auth.service';
 import {AuthGuardService} from './services/auth-guard.service';
 import {BooksService} from './services/books.service';
@@ -38,7 +37,6 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

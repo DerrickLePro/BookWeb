@@ -1,3 +1,19 @@
-<p>
-  signup works!
-</p>
+<div class="row">
+  <div class="col">
+    <form [formGroup]="signupForm" (submit)="onSubmit()"  >
+      <div class="form-group">
+        <h2 class="form-text">Créer un compte<</h2>
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password">
+      </div>
+
+      <button type="submit" class="btn btn-primary"   [disabled]="signupForm.invalid">Créer mon compte</button>
+    </form>
+    <p class="text-danger">{{errorMessage}}</p>
+  </div>
+</div>
